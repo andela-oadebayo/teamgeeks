@@ -2,21 +2,29 @@
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'run',
-1 verbose cli   'webdriver-manager',
-1 verbose cli   'update' ]
+1 verbose cli   'karma-test' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 error Error: ENOENT, open 'C:\SOURCE\teamgeeks\node_modules\webdriver-manager\package.json'
-6 error If you need help, you may report this *entire* log,
-6 error including the npm and node versions, at:
-6 error     <http://github.com/npm/npm/issues>
-7 error System Windows_NT 6.1.7600
-8 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "webdriver-manager" "update"
-9 error cwd C:\SOURCE\teamgeeks
-10 error node -v v0.10.33
-11 error npm -v 1.4.28
-12 error path C:\SOURCE\teamgeeks\node_modules\webdriver-manager\package.json
-13 error code ENOENT
-14 error errno 34
-15 verbose exit [ 34, true ]
+5 verbose run-script [ 'prekarma-test', 'karma-test', 'postkarma-test' ]
+6 info prekarma-test teamgeeks@1.0.0
+7 info karma-test teamgeeks@1.0.0
+8 verbose unsafe-perm in lifecycle true
+9 info teamgeeks@1.0.0 Failed to exec karma-test script
+10 error teamgeeks@1.0.0 karma-test: `node node_modules/karma/bin/karma`
+10 error Exit status 1
+11 error Failed at the teamgeeks@1.0.0 karma-test script.
+11 error This is most likely a problem with the teamgeeks package,
+11 error not with npm itself.
+11 error Tell the author that this fails on your system:
+11 error     node node_modules/karma/bin/karma
+11 error You can get their info via:
+11 error     npm owner ls teamgeeks
+11 error There is likely additional logging output above.
+12 error System Windows_NT 6.1.7600
+13 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "karma-test"
+14 error cwd C:\Source\teamgeeks
+15 error node -v v0.10.33
+16 error npm -v 1.4.28
+17 error code ELIFECYCLE
+18 verbose exit [ 1, true ]

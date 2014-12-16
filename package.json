@@ -28,5 +28,10 @@
     "karma-chrome-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.2",
     "protractor": "^1.5.0"
+  },
+  
+  "scripts": {
+    "karma-init" : "node node_modules/karma/bin/karma init",
+    "karma-start" : "node node_modules/karma/bin/karma start test/karma.conf.js"
   }
 }
