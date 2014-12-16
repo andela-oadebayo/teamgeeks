@@ -8,7 +8,6 @@ describe('TeamgeeksController', function() {
       var scope = {},
         controller = $controller('TeamgeeksController', {$scope:scope});
       expect(scope.hobbies).toBeDefined();
-
     }));
     
     it('should have a maximum length of 4', inject(function($controller){
@@ -29,7 +28,7 @@ describe('TeamgeeksController', function() {
 
 
 
-// testing for name
+  // testing for name
   describe('TeamgeeksControllerName', function() {
     it('should check if name exists', inject(function($controller) {
 
@@ -48,7 +47,7 @@ describe('TeamgeeksController', function() {
   });
 
 
-// testing for age
+  // testing for age
   describe('TeamgeeksControllerAge', function() {
     it('should check if age exists', inject(function($controller) {
 
@@ -66,7 +65,7 @@ describe('TeamgeeksController', function() {
   });
 
 
-// testing for goodInAngular 
+  // testing for goodInAngular 
   describe('TeamgeeksControllerGoodInAngular', function() {
     it('should check if goodInAngular exists', inject(function($controller) {
       var scope = {},
@@ -80,6 +79,31 @@ describe('TeamgeeksController', function() {
         controller = $controller('TeamgeeksController', {$scope:scope});
       expect(typeof scope.goodInAngular).toEqual('boolean');
     }));
+  });
+
+
+  //TESTING FOR HTTP REQUEST
+  describe('TeamgeeksControllerJSON', function(){
+    var scope,
+        ctrl,
+        $httpBackend;
+
+    beforeEach(module('teamgeeksApp'));
+
+    beforeEach(inject(function(_$httpBackend_, $rootScope, $controller){
+      $httpBackend = _$httpBackend_;
+      $httpBackend.expectGET('../../app/js/custom/teamgeeks.json').respond([{age: 35}, {name: "Damilola"}]);
+
+      scope = $rootScope.$new();
+      ctrl = $controller('TeamgeeksController', {$scope: scope});
+    }));
+
+    it('should create a "geek" model with name and age', function(){
+      expect(scope.teamgeeks).toBeUndefined();
+      $httpBackend.flush();
+
+      expect(scope.teamgeeks).toEqual([{age: 35}, {name: "Damilola"}]);
+    });
   });
 });
 

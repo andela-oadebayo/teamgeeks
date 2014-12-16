@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="teamgeeksApp">
+  
+  <head>
+    <script src="js/vendor/angular.js"></script>
+    <script src="js/custom/controller.js"></script>
+  </head>
+
+  <body ng-controller="TeamgeeksController">
+    <ul>
+      <li ng-repeat='hobby in hobbies'>{{hobby}}</li>
+    </ul>
+    <input type="text" ng-model="name">
+    <p>Name: {{name}}</p>
+    <p>Age:{{age}}</p>
+
+    <p>Good in Angular: {{goodInAngular}}</p>
+    
+  </body>
+</html>

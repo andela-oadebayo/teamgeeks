@@ -18,6 +18,7 @@ module.exports = function(config) {
         'app/js/vendor/angular.js',
         'app/js/custom/*.js',
         'app/js/vendor/angular-mocks.js',
+        'app/js/vendor/angular-resource.js',
         'test/unit/*.js'
     ],
 

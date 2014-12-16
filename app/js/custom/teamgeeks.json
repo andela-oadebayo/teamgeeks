@@ -1,0 +1,30 @@
+[
+
+  {
+    "name": "Damilola",
+    "age": 18,
+    "hobbies": ["Coding", "Eating", "Wooing", "Preaching the Gospel to Deji"],
+    "goodInAngular": true
+  },
+
+  {
+    "name": "Mirabel",
+    "age": 16,
+    "hobbies": ["Coding", "Gisting", "Singing", "chating"],
+    "goodInAngular": true
+  },
+
+  {
+    "name": "Deji",
+    "age": 25,
+    "hobbies": ["Coding", "f**k", "Distubing Debbie", "Disturbing Mirabel"],
+    "goodInAngular": true
+  },
+
+  {
+    "name": "Chiemeka",
+    "age": 23,
+    "hobbies": ["Coding", "Walking and Noding", "Wooing", "Sitting close to Mirabel"],
+    "goodInAngular": true
+  }
+]
