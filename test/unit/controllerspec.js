@@ -92,17 +92,17 @@ describe('TeamgeeksController', function() {
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller){
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('../../app/js/custom/teamgeeks.json').respond([{age: 35}, {name: "Damilola"}]);
+      $httpBackend.expectGET('https://api.github.com/users/andela-mekwenugo').respond({ "login": "octocat", "type": "User", "followers": 20 });
 
       scope = $rootScope.$new();
       ctrl = $controller('TeamgeeksController', {$scope: scope});
     }));
 
     it('should create a "geek" model with name and age', function(){
-      expect(scope.teamgeeks).toBeUndefined();
+      expect(scope.gitUsers).toBeUndefined();
       $httpBackend.flush();
 
-      expect(scope.teamgeeks).toEqual([{age: 35}, {name: "Damilola"}]);
+      expect(scope.gitUsers).toEqual({"login": "octocat", "type": "User", "followers": 20});
     });
   });
 });

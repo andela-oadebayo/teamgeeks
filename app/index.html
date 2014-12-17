@@ -9,18 +9,19 @@
 
   <body ng-controller="TeamgeeksController">
   <h1>TEAM GEEKS</h1>
-    <table class="table table-hover table-striped table-bordered">
+
+
+  <p><img src="{{gitUsers.avatar_url}}"></p>
+  <p>Name:{{gitUsers.name}}</p>
+  <p>Company: {{gitUsers.company}}</p>
+  <p>Username: {{gitUsers.login}}</p>
+  <p>Email: {{gitUsers.email}}</p>
+<!--     <table class="table table-hover">
+
       <tr>
         <th>NAME</th>
         <th>AGE</th>
-        <th>HOBBIES
-          <!-- <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-            <th>4</th>
-          </tr> -->
-        </th>
+        <th>HOBBIES</th>
         <th>GOOD IN ANGULAR</th>
       </tr>
       <tr ng-repeat="person in persons">
@@ -29,8 +30,10 @@
         <td>{{person.hobbies[0]}}, {{person.hobbies[1]}}, {{person.hobbies[2]}}, {{person.hobbies[3]}}</td>
         <td>{{person.goodInAngular}}</td>
       </tr>
-    </table>
-    <ul class="list-inline">
+
+    </table> -->
+    <!-- <ul>
+
       <li ng-repeat='hobby in hobbies'>{{hobby}}</li>
       <li ng-repeat='person in persons'>{{person.name}}</li>
       <li ng-repeat='person in persons'>{{person.age}}</li>
@@ -42,5 +45,6 @@
 
     <p>Good in Angular: {{goodInAngular}}</p>
      -->
+
   </body>
 </html>
