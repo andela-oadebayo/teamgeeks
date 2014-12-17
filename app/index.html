@@ -8,14 +8,20 @@
   </head>
 
   <body ng-controller="TeamgeeksController">
-  <h1>TEAM GEEKS</h1>
+    <h1>TEAM GEEKS</h1>
 
+    <form ng-submit="searchUser(userName)">
 
-  <p><img src="{{gitUsers.avatar_url}}"></p>
-  <p>Name:{{gitUsers.name}}</p>
-  <p>Company: {{gitUsers.company}}</p>
-  <p>Username: {{gitUsers.login}}</p>
-  <p>Email: {{gitUsers.email}}</p>
+      <input type="text" id="textArea" ng-model="userName">
+      <input type="submit" name="search" id="search">
+
+    </form>
+
+    <p><img src="{{gitUsers.avatar_url}}"></p>
+    <p>Name:{{gitUsers.name}}</p>
+    <p>Company: {{gitUsers.company}}</p>
+    <p>Username: {{gitUsers.login}}</p>
+    <p>Email: {{gitUsers.email}}</p>
 <!--     <table class="table table-hover">
 
       <tr>
