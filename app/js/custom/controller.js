@@ -3,7 +3,7 @@
  var teamgeeksApp = angular.module('teamgeeksApp', []);
 
  teamgeeksApp.controller('TeamgeeksController',['$scope', '$http', function($scope,$http){
-    $http.get('https://api.github.com/users/andela-mekwenugo').success(function(data){
+    $http.get('https://api.github.com/users').success(function(data){
       $scope.gitUsers = data;
       console.log(data);
     });

@@ -22,7 +22,7 @@ module.exports = function(config) {
         'test/unit/*.js'
     ],
 
-    plugins : [
+    plugins: [
         'karma-chrome-launcher',
         'karma-jasmine'
     ],

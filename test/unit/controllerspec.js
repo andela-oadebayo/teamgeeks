@@ -28,7 +28,7 @@ describe('TeamgeeksController', function() {
 
 
 
-  // testing for name
+  //testing for name
   describe('TeamgeeksControllerName', function() {
     it('should check if name exists', inject(function($controller) {
 
