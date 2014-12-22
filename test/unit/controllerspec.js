@@ -28,9 +28,15 @@ describe('TeamgeeksController', function() {
 
 
 
+
   //testing for name
   describe('TeamgeeksControllerName', function() {
     it('should check if name exists', inject(function($controller) {
+
+  // testing for name
+  describe('TeamgeeksControllerName', function() {
+    it('should check if name exists', inject(function($controller) {
+
 
       var scope = {},
         controller = $controller('TeamgeeksController', {$scope:scope});
@@ -89,10 +95,10 @@ describe('TeamgeeksController', function() {
         $httpBackend;
 
     beforeEach(module('teamgeeksApp'));
-
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller){
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('https://api.github.com/users/andela-mekwenugo').respond({ "login": "octocat", "type": "User", "followers": 20 });
+      // $httpBackend.expectGET('https://api.github.com/users/'+userName).respond({ "login": "octocat", "type": "User", "followers": 20 });
+      $httpBackend.expectGET('https://api.github.com/users/'+userName).respond({ "login": "octocat", "type": "User", "followers": 20 });
 
       scope = $rootScope.$new();
       ctrl = $controller('TeamgeeksController', {$scope: scope});

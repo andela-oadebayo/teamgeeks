@@ -8,14 +8,22 @@
   </head>
 
   <body ng-controller="TeamgeeksController">
-  <h1>TEAM GEEKS</h1>
+    <h1>TEAM GEEKS</h1>
 
-  <p><img src="{{gitUsers.avatar_url}}"></p>
-  <p>Name:{{gitUsers.name}}</p>
-  <p>Company: {{gitUsers.company}}</p>
-  <p>Username: {{gitUsers.login}}</p>
-  <p>Email: {{gitUsers.email}}</p>
+    <form ng-submit="searchUser()">
+
+      <input type="text" id="textArea" ng-model="userName">
+      <input type="submit" name="search" id="search">
+
+    </form>
+
+    <p><img src="{{gitUsers.avatar_url}}"></p>
+    <p>Name:{{gitUsers.name}}</p>
+    <p>Company: {{gitUsers.company}}</p>
+    <p>Username: {{gitUsers.login}}</p>
+    <p>Email: {{gitUsers.email}}</p>
 <!--     <table class="table table-hover">
+
       <tr>
         <th>NAME</th>
         <th>AGE</th>
@@ -28,13 +36,15 @@
         <td>{{person.hobbies[0]}}, {{person.hobbies[1]}}, {{person.hobbies[2]}}, {{person.hobbies[3]}}</td>
         <td>{{person.goodInAngular}}</td>
       </tr>
+
     </table> -->
     <!-- <ul>
+
       <li ng-repeat='hobby in hobbies'>{{hobby}}</li>
       <li ng-repeat='person in persons'>{{person.name}}</li>
       <li ng-repeat='person in persons'>{{person.age}}</li>
-      <li ng-repeat='person in persons'>{{person.}}</li>
-    </ul> -->
+      <li ng-repeat='person in persons'>{{person.goodInAngular}}</li>
+    </ul>
     <!-- <input type="text" ng-model="name"> -->
     <!-- <p>Name: {{name}}</p>
     <p>Age:{{age}}</p>
